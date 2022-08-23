@@ -1,4 +1,7 @@
 import * as express from 'express';
+import bp = require('body-parser');
+import login from './routes/login';
+import errors from './database/middlewares/error';
 
 class App {
   public app: express.Express;
@@ -22,6 +25,10 @@ class App {
 
     this.app.use(express.json());
     this.app.use(accessControl);
+    this.app.use(bp.json());
+    this.app.use(bp.urlencoded({ extended: true }));
+    this.app.use(login);
+    this.app.use(errors);
   }
 
   public start(PORT: string | number):void {
