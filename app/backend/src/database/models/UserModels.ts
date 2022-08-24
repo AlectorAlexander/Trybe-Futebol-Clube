@@ -9,7 +9,7 @@ class Users extends Model {
   public role: string;
 }
 
-export default Users.init({
+Users.init({
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -32,7 +32,10 @@ export default Users.init({
     allowNull: false,
   },
 }, {
+  underscored: true,
   modelName: 'users',
   sequelize: db,
   timestamps: false,
 });
+
+export default Users;

@@ -32,8 +32,8 @@ export default class UserServices {
   public decodedToken = (token: string): any => {
     try {
       return jwt_decode(token);
-    } catch (Error) {
-      return null;
+    } catch (error) {
+      return { error };
     }
   };
 }

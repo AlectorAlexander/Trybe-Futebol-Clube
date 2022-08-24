@@ -12,7 +12,8 @@ class UserController {
     const token = req.headers.authorization;
     const tkn = token || 'fail';
     const { role, error } = this.userService.decodedToken(tkn);
-    if (error) return next(error);
+
+    if (!role) return next(error);
 
     res.status(StatusCodes.OK).json({ role });
   };
