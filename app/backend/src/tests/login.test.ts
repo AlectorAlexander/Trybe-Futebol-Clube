@@ -47,7 +47,6 @@ describe('Login', () => {
       password: "secret_admin"
      })     
 
-    console.log(HttpResponse.body);
 
     expect(HttpResponse.status).to.equal(200)
      
@@ -63,7 +62,6 @@ describe('Login', () => {
      email: "admin@admin.com",
      password: "secret_amin"
     })     
-    console.log(HttpResponse.body);
     
     expect(HttpResponse.status).to.equal(401)
     
@@ -76,7 +74,6 @@ describe('Login', () => {
      email: "",
      password: "secret_amin"
     })     
-    console.log(HttpResponse.body);
     
     expect(HttpResponse.status).to.equal(400)
     
@@ -89,7 +86,6 @@ describe('Login', () => {
      email: "thanosTemRazão",
      password: "secret_amin"
     })     
-    console.log(HttpResponse.body);
     
     expect(HttpResponse.status).to.equal(400)
     
@@ -99,7 +95,6 @@ describe('Login', () => {
     .request(app)
     .get('/login/validate')
     .send({ token: 'inválido' })     
-    console.log(HttpResponse.body);
     
     expect(HttpResponse.status).to.equal(500)
     
