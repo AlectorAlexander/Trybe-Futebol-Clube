@@ -15,7 +15,6 @@ class TeamController {
   public getById = async (req: Request, res: Response, next: NextFunction) => {
     const id = parseInt(req.params.id, 10);
     const Team = await this.teamServices.getById(id);
-    console.log(Team);
     const error = { status: StatusCodes.NOT_FOUND, message: 'Team not found!' };
 
     if (!Team) {

@@ -2,6 +2,7 @@ import * as express from 'express';
 import bp = require('body-parser');
 import login from './routes/login';
 import teams from './routes/teams';
+import matches from './routes/matches';
 import errors from './database/middlewares/error';
 
 class App {
@@ -30,6 +31,7 @@ class App {
     this.app.use(bp.urlencoded({ extended: true }));
     this.app.use(login);
     this.app.use(teams);
+    this.app.use(matches);
     this.app.use(errors);
   }
 

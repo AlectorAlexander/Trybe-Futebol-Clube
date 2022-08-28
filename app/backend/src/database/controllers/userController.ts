@@ -1,4 +1,3 @@
-/* import Joi = require('joi'); */
 import { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 /* import bcrypt = require('bcryptjs'); */
