@@ -17,7 +17,7 @@
 <p dir="auto">Para ver o Back-end &amp; Front-end funcionando em conjunto, siga esses passos:</p>
 <ul dir="auto">
 <li>Clone esse repositório em sua máquina</li>
-<li>Instale as dependências</li>
+<li>Instale as dependências (npm install)</li>
 <li>Entre no diretório app/backEnd e starte a aplicação (npm start)</li>
 <li>Em um segundo terminal, entre no diretório app/frontend e starte a aplicação aqui também (npm start).</li>
 </ul>
